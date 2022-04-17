@@ -24,8 +24,13 @@ class App extends Component {
     })
   }
 
-  favorite = () => {
-    
+  favorite = (e) => {
+    let btn = document.getElementById(e)
+    if (btn.classList.contains('favorited')) {
+      btn.classList.remove('favorited')
+    } else {
+      btn.classList.add('favorited')
+    }
   }
 
   render() {
@@ -35,7 +40,7 @@ class App extends Component {
         {this.state.beerData.map((beer,index) => {
           return (
             <ul>
-              <BeerCard key={index} beer={beer} />
+              <BeerCard key={index} beer={beer} favorite={this.favorite} id={index}/>
             </ul>
           )
         })}

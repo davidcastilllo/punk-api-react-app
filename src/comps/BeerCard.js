@@ -12,9 +12,8 @@ function BeerCard(props) {
       </div>
       <div id="imgAndButton">
         <img src={props.beer.image_url} id="beerImg"></img>
-        <button onClick={() => { console.log('Clicked') }} id="beerBtn" >Favorite</button>
+        <button onClick={((e) => {props.favorite(props.id)})} id={props.id} >Favorite</button>
       </div>
-
     </li>
   )
 }

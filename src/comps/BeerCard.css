@@ -4,10 +4,7 @@ li {
 
 #beerImg {
     height: 160px;
-}
-
-#beerBtn {
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .beerName, .beerLine, .beerDesc{
